@@ -2,7 +2,7 @@
 	"id": "BossJokers",
 	"name": "Boss Jokers",
 	"display_name": "Boss Jokers",
-	"author": ["Salpootsy", "Salpaka"],
+	"author": ["Salpootsy"],
 	"description": "Adds jokers that are based on boss blinds to multiplayer",
 	"prefix": "mpbj",
 	"main_file": "core.lua",

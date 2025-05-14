@@ -12,4 +12,4 @@ An addon to the Balatro Multiplayer mod that adds 20 new jokers based on boss bl
 
 ## License
 
-This project is licensed under the GNU General Public License v3.0 - see the [LICENSE.md](https://github.com/V-rtualized/balatro-multiplayer/blob/main/LICENSE.md) file for details.
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE.md](https://github.com/salpootsy/BossJokers/blob/main/LICENSE) file for details.

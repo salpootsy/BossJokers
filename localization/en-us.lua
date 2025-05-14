@@ -165,7 +165,7 @@ return {
 			j_mpbj_the_house = {
 				name = "The House",
 				text = {
-					"Your {X:purple,C:white}Nemesis's{} first hand",
+					"Your {X:purple,C:white}Nemesis'{} first hand",
                     "is drawn face down in",
 					"the next {C:attention}PvP Blind"
 				}
@@ -249,7 +249,7 @@ return {
 			j_mpbj_the_flint = {
 				name = "The Flint",
 				text = {
-					"Your {X:purple,C:white}Nemesis's{}",
+					"Your {X:purple,C:white}Nemesis'{}",
 					"base {C:chips}Chips{} and",
                     "{C:mult}Mult{} are {C:attention}halved{} in",
 					"the next {C:attention}PvP Blind"
@@ -342,11 +342,11 @@ return {
 			}
 		},
 		Tag = {
-			mpbj_boss_tag = {
+			tag_mpbj_boss_tag = {
 				name="Boss Tag",
             	text={
             	    "Rerolls the",
-					"{X:purple,C:white}Nemesis's{}",
+					"{X:purple,C:white}Nemesis'{}",
             	    "{C:attention}Boss Joker"
             	},
 			}

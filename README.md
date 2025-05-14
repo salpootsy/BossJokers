@@ -8,7 +8,7 @@ An addon to the Balatro Multiplayer mod that adds 20 new jokers based on boss bl
 2. Extract the files into a new folder in your Balatro mods directory
 3. Run the game
 
-*Requires [Steamodded](https://github.com/Steamodded/smods) (>=1.0.0~BETA-0323b), [Balatro Multiplayer](https://github.com/Balatro-Multiplayer/BalatroMultiplayer) (>=>=0.2.8) and [Lovely Injector](https://github.com/ethangreen-dev/lovely-injector) (>=0.7)
+*Requires [Steamodded](https://github.com/Steamodded/smods) (>=1.0.0~BETA-0323b), [Balatro Multiplayer](https://github.com/Balatro-Multiplayer/BalatroMultiplayer) (>=0.2.8) and [Lovely Injector](https://github.com/ethangreen-dev/lovely-injector) (>=0.7)
 
 ## License
 

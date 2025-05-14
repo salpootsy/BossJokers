@@ -22,7 +22,7 @@ SMODS.Joker({
 		
 	end,
 	in_pool = function(self)
-		return MP.LOBBY.code and MP.LOBBY.config.multiplayer_jokers
+		return MP.LOBBY.code and MP.LOBBY.config.multiplayer_jokers and enemy_has_boss_jokers()
 	end,
 	calculate = function(self, card, context)
 		if context.selling_self and have_boss_phantom() then

@@ -1,6 +1,27 @@
 BossJokers = SMODS.current_mod
+BossJokers.BossJokerList = {
+	"j_mpbj_the_arm",
+	"j_mpbj_the_club",
+	"j_mpbj_the_eye",
+	"j_mpbj_the_fish",
+	"j_mpbj_the_flint",
+	"j_mpbj_the_goad",
+	"j_mpbj_the_head",
+	"j_mpbj_the_hook",
+	"j_mpbj_the_house",
+	"j_mpbj_the_manacle",
+	"j_mpbj_the_mark",
+	"j_mpbj_the_mouth",
+	"j_mpbj_the_ox",
+	"j_mpbj_the_pillar",
+	"j_mpbj_the_plant",
+	"j_mpbj_the_psychic",
+	"j_mpbj_the_tooth",
+	"j_mpbj_the_water",
+	"j_mpbj_the_wheel",
+	"j_mpbj_the_window"
+}
 
---change ModName with the mod name
 function BossJokers.load_file(file)
 	local chunk, err = SMODS.load_file(file, "BossJokers")
 	if chunk then
@@ -45,21 +66,7 @@ SMODS.Atlas({
 
 BossJokers.load_dir("localization")
 BossJokers.load_dir("misc")
-BossJokers.load_dir("objects/Blinds")
 BossJokers.load_dir("objects/Editions")
 BossJokers.load_dir("objects/Jokers")
-BossJokers.load_dir("objects/Consumables")
-BossJokers.load_dir("objects/Boosters")
-BossJokers.load_dir("objects/Vouchers")
-BossJokers.load_dir("objects/Enhancements")
-BossJokers.load_dir("objects/Seals")
-BossJokers.load_dir("objects/Stickers")
 BossJokers.load_dir("objects/Tags")
-BossJokers.load_dir("objects/Stakes")
-BossJokers.load_dir("objects/Rarities")
-BossJokers.load_dir("objects/Backs")
-BossJokers.load_dir("objects/Ranks")
-BossJokers.load_dir("objects/Suits")
-BossJokers.load_dir("objects/Challenges")
-BossJokers.load_dir("objects/PokerHand")
 BossJokers.load_dir("rulesets")

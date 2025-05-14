@@ -27,7 +27,7 @@ SMODS.Joker({
 		end
 	end,
 	in_pool = function(self)
-		return MP.LOBBY.code and MP.LOBBY.config.multiplayer_jokers and not G.GAME.pool_flags.no_boss_jokers
+		return MP.LOBBY.code and MP.LOBBY.config.multiplayer_jokers and enemy_has_boss_jokers() and not G.GAME.pool_flags.no_boss_jokers
 	end,
 	calculate = function(self, card, context)
 		if context.hand_drawn and MP.is_pvp_boss() and card.edition ~= nil and card.edition.type == "mp_phantom" and not context.blueprint then
@@ -51,6 +51,8 @@ SMODS.Joker({
 		add_boss_edition(card)
 		if card.edition ~= nil and card.edition.type == "mp_phantom" then
 			self.pos.x = 1
+		else
+			self.pos.x = 0
 		end
 	end
 })

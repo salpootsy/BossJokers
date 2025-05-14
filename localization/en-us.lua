@@ -340,6 +340,16 @@ return {
 					"Can not get an edition"
 				}
 			}
+		},
+		Tag = {
+			mpbj_boss_tag = {
+				name="Boss Tag",
+            	text={
+            	    "Rerolls the",
+					"{X:purple,C:white}Nemesis's{}",
+            	    "{C:attention}Boss Joker"
+            	},
+			}
 		}
 	},
 	misc = {
@@ -350,8 +360,9 @@ return {
 			c_mpbj_boss_jokers = "Boss Jokers",
 		},
 		dictionary = {
-			k_boss_jokers = "Boss Jokers",
-			k_boss_jokers_description = "The Standard ruleset with the edition of the Boss Jokers"
+			k_not_allowed_ex = "Not Allowed!",
+			k_pvp_end = "PvP Ended",
+			k_no_discards = "No Discards",
 		}
 	}
 }

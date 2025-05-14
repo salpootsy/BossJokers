@@ -1,5 +1,5 @@
 function destroy_after_pvp(context, card)
-	if card.edition.type == "mpbj_boss_edition" and context.end_of_round and MP.is_pvp_boss() and not context.blueprint then
+	if card.edition ~= nil and card.edition.type == "mpbj_boss_edition" and context.end_of_round and MP.is_pvp_boss() and not context.blueprint then
 		card.ability.extra.destroy = true
 	end
 	if context.starting_shop and card.ability.extra.destroy then
@@ -17,7 +17,7 @@ function destroy_after_pvp(context, card)
 			return true
 		end})) 
 		return {
-			message = "PvP Ended",
+			message = localize("k_pvp_end"),
 			colour = G.C.FILTER
 		}
 	end
@@ -31,8 +31,10 @@ function add_boss_joker_info(info_queue)
 end
 
 function remove_other_boss_jokers(card)
+	local joker_name = {}
 	for k, v in pairs(G.jokers.cards) do
 		if v ~= card and v.edition ~= nil and v.edition.type == "mpbj_boss_edition" then
+			joker_name[#joker_name+1] = v.ability.name
 			G.E_MANAGER:add_event(Event({func = function()
 				play_sound('tarot1')
 				v.T.r = -0.2
@@ -47,6 +49,18 @@ function remove_other_boss_jokers(card)
 				return true
 			end}))
 		end
+	end
+	return joker_name
+end
+
+function reroll_boss_joker(card)
+	local removed_joker = remove_other_boss_jokers(card)
+	if removed_joker ~= nil then
+		SMODS.remove_pool(BossJokers.BossJokerList, removed_joker[1])
+	end
+	SMODS.add_card({set = "joker", key = pseudorandom_element(BossJokers.BossJokerList, pseudoseed('reroll'))})
+	if removed_joker ~= nil then
+		BossJokers.BossJokerList[#BossJokers.BossJokerList] = removed_joker[1]
 	end
 end
 
@@ -132,7 +146,7 @@ function disallow_hand(context, card, disallow)
 				return true
 			end)
 		}))
-		play_area_status_text("Not Allowed!")
+		play_area_status_text(localize("k_not_allowed_ex"))
 	else
 		G.GAME.hands[context.scoring_name].mult = G.GAME.hands[context.scoring_name].s_mult + ((G.GAME.hands[context.scoring_name].level - 1) * G.GAME.hands[context.scoring_name].l_mult)
 		G.GAME.hands[context.scoring_name].chips = G.GAME.hands[context.scoring_name].s_chips + ((G.GAME.hands[context.scoring_name].level - 1) * G.GAME.hands[context.scoring_name].l_chips)
@@ -158,6 +172,19 @@ end
 function have_boss_phantom()
 	for i, v in pairs(MP.shared.cards) do
 		if string.find(v.ability.name, "mpbj") then
+			return true
+		end
+	end
+	return false
+end
+
+function enemy_has_boss_jokers()
+	if MP.LOBBY.is_host then
+		if string.find(MP.LOBBY.guest.hash_str, BossJokers.id) then
+			return true
+		end
+	else
+		if string.find(MP.LOBBY.host.hash_str, BossJokers.id) then
 			return true
 		end
 	end

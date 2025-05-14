@@ -4,7 +4,7 @@ An addon to the Balatro Multiplayer mod that adds 20 new jokers based on boss bl
 
 ## Installation
 
-1. Download the latest release from the [Releases page]()
+1. Download the latest release from the [Releases page](https://github.com/salpootsy/BossJokers/releases/latest)
 2. Extract the files into a new folder in your Balatro mods directory
 3. Run the game
 

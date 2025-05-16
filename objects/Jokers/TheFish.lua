@@ -66,10 +66,6 @@ SMODS.Joker({
 	end,
 	update = function(self, card, dt)
 		add_boss_edition(card)
-		if card.edition ~= nil and card.edition.type == "mp_phantom" then
-			self.pos.x = 1
-		else
-			self.pos.x = 0
-		end
+		set_phantom_sprite(card)
 	end
 })

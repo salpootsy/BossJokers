@@ -107,7 +107,7 @@ function unflip(cards)
 end
 
 function add_boss_to_deck(card, key)
-	remove_other_boss_jokers(card)
+	--remove_other_boss_jokers(card)
 	MP.ACTIONS.send_phantom(key)
 	G.GAME.pool_flags.no_boss_jokers = true
 end
@@ -189,4 +189,12 @@ function enemy_has_boss_jokers()
 		end
 	end
 	return false
+end
+
+function set_phantom_sprite(card)
+	if card.edition ~= nil and card.edition.type == "mp_phantom" then
+		card.children.center:set_sprite_pos({x=1,y=0})
+	else
+		card.children.center:set_sprite_pos({x=0,y=0})
+	end
 end

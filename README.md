@@ -1,6 +1,6 @@
 # Boss Jokers for Multiplayer Mod
 
-An addon to the Balatro Multiplayer mod that adds 20 new jokers based on boss blinds and reworks Luchador to work with them.
+An addon to the Balatro Multiplayer mod that adds 20 new jokers based on boss blinds and reworks Luchador and Chicot to work with them.
 
 ## Installation
 

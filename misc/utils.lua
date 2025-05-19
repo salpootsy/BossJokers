@@ -107,7 +107,7 @@ function unflip(cards)
 end
 
 function add_boss_to_deck(card, key)
-	--remove_other_boss_jokers(card)
+	remove_other_boss_jokers(card)
 	MP.ACTIONS.send_phantom(key)
 	G.GAME.pool_flags.no_boss_jokers = true
 end
@@ -197,4 +197,16 @@ function set_phantom_sprite(card)
 	else
 		card.children.center:set_sprite_pos({x=0,y=0})
 	end
+end
+
+function set_last_tag(key)
+	last_index = 1
+	for i, v in ipairs(G.GAME.tags) do
+		if v.key == key then
+			last_index = i
+			v.config.extra.last = false
+		end
+	end
+	G.GAME.tags[last_index].config.extra.last = true
+	return last_index
 end

@@ -22,8 +22,5 @@ MP.Ruleset:take_ownership("mp_standard", {
 		"j_mpbj_the_tooth",
 		"j_mpbj_the_flint",
 		"j_mpbj_the_mark",
-	}),
-	reworked_tags = merge(MP.Rulesets.ruleset_mp_standard.reworked_tags,{
-		"tag_mpbj_boss_tag",
-	}),
+	})
 }, true)

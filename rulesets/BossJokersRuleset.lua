@@ -1,6 +1,7 @@
 MP.Ruleset:take_ownership("mp_standard", {
 	reworked_jokers = merge(MP.Rulesets.ruleset_mp_standard.reworked_jokers, {
 		"j_mpbj_luchador",
+		"j_mpbj_chicot",
 		"j_mpbj_the_hook",
 		"j_mpbj_the_ox",
 		"j_mpbj_the_house",

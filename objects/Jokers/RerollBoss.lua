@@ -46,5 +46,10 @@ SMODS.Joker({
 	end,
 	remove_from_deck = function(self, card, from_debuff)
 		
+	end,
+	update = function (self, card, dt)
+		if card.edition ~= nil and card.edition.type == "mp_phantom" then
+			card.ability.mp_sticker_nemesis = false
+		end
 	end
 })

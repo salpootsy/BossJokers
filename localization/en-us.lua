@@ -8,6 +8,14 @@ return {
 						"from your {X:purple,C:white}Nemesis{}"
 				}
 			},
+			j_mpbj_chicot = {
+				name = "Chicot",
+				text = {
+						"Removes {C:attention}Boss Jokers{}",
+						"from your {X:purple,C:white}Nemesis{}",
+						"at the start of {C:attention}PvP Blind"
+				}
+			},
 			j_mpbj_the_water = {
 				name = "The Water",
 				text = {
